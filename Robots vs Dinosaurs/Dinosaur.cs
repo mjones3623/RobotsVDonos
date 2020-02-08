@@ -12,7 +12,7 @@ namespace Robots_vs_Dinosaurs
         //Member Variables
 
         string dinoType;
-        int dinoHealth;
+        public int dinoHealth;
         int dinoEnergy;
         int dinoAttackPower;
 

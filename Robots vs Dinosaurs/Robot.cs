@@ -29,6 +29,10 @@ namespace Robots_vs_Dinosaurs
 
         //Member Methods
 
-
+            //Robot attack on Dinosaur
+        public void attackDinoWithSword(Dinosaur dinoToAttack)
+        {
+            dinoToAttack.dinoHealth -= swordStrike;
+        }
     }
 }

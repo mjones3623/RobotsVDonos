@@ -19,9 +19,9 @@ namespace Robots_vs_Dinosaurs
 
         public Fleet()
         {
-            Fleet robot1 = new Robot(RobotName1,10,10,2);
-            Fleet robot2 = new Robot();
-            Fleet robot3 = new Robot();
+            robot1 = new Robot("Robo1",10,10,2);
+            robot2 = new Robot("Robo2", 10, 10, 2);
+            robot3 = new Robot("Robo3", 10, 10, 2);
 
 
         }
