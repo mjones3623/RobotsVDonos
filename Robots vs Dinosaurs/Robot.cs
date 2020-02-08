@@ -10,10 +10,10 @@ namespace Robots_vs_Dinosaurs
     {
         //Member Variables
         
-        string robotName;
-        int robotHealth;
-        int robotPowerLevel;
-        int swordStrike;
+        public string robotName;
+        public int robotHealth;
+        public int robotPowerLevel;
+        public int swordStrike;
 
         //Constructor
 

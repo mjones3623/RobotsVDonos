@@ -11,10 +11,10 @@ namespace Robots_vs_Dinosaurs
 
         //Member Variables
 
-        string dinoType;
+        public string dinoType;
         public int dinoHealth;
-        int dinoEnergy;
-        int dinoAttackPower;
+        public int dinoEnergy;
+        public int dinoAttackPower;
 
         //Constructor
 
@@ -24,6 +24,13 @@ namespace Robots_vs_Dinosaurs
             dinoHealth = 10;
             dinoEnergy = 10;
             dinoAttackPower = 2;
+        }
+
+        //Member Methods
+
+        public void attackRobo(Robot robotToAttack)
+        {
+            robotToAttack.robotHealth -= dinoAttackPower;
         }
     }
 }
