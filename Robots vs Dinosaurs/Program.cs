@@ -15,7 +15,7 @@ namespace Robots_vs_Dinosaurs
 
             battle1 = new Battlefield()
 
-            .Battle;
+            battle1.Battle()
            
 
         }
