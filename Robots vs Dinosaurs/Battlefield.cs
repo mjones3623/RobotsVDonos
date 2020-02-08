@@ -8,10 +8,15 @@ namespace Robots_vs_Dinosaurs
 {
     class Battlefield
     {
-        Herd theHerd;
-        Fleet theFleet;
+       //Variables
+        
+        public Herd theHerd;
+        public Fleet theFleet;
 
+        //Constructor
 
+          
+            
         public void Battle(Herd theHerd, Fleet theFleet)
         {
      

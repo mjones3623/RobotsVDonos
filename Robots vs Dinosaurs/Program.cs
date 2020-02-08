@@ -8,14 +8,15 @@ namespace Robots_vs_Dinosaurs
 {
     class Program
     {
-        //Variables
-
-        Battlefield battle;
+                
         static void Main(string[] args)
         {
-            
+            Battlefield battle1;
 
+            battle1 = new Battlefield()
 
+            .Battle;
+           
 
         }
     }
