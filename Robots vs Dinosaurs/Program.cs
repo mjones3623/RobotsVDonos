@@ -13,10 +13,11 @@ namespace Robots_vs_Dinosaurs
         {
             Battlefield battle1;
 
-            battle1 = new Battlefield()
+            battle1 = new Battlefield();
 
-            battle1.Battle()
-           
+            battle1.Battle();
+
+            
 
         }
     }

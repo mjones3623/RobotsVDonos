@@ -15,9 +15,15 @@ namespace Robots_vs_Dinosaurs
 
         //Constructor
 
-          
+            public Battlefield()
+        {
+            theHerd = new Herd();
+            theFleet = new Fleet();
+        }
+                  
+        
             
-        public void Battle(Herd theHerd, Fleet theFleet)
+        public void Battle()
         {
      
             theFleet.robot1.attackDinoWithSword(theHerd.dino1);
@@ -26,6 +32,8 @@ namespace Robots_vs_Dinosaurs
             theHerd.dino1.attackRobo(theFleet.robot1);
             theHerd.dino2.attackRobo(theFleet.robot2);
             theHerd.dino3.attackRobo(theFleet.robot3);
+
+            
 
         }
     }
