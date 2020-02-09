@@ -26,12 +26,7 @@ namespace Robots_vs_Dinosaurs
 
                       
         }
-        public Dinosaur dino1 = new Dinosaur();
-        public Dinosaur dino2 = new Dinosaur();
-        public Dinosaur dino3 = new Dinosaur();
-        public Robot robot1 = new Robot();
-        public Robot robot2 = new Robot();
-        public Robot robot3 = new Robot();
+       
 
 
         //Methods
@@ -48,12 +43,12 @@ namespace Robots_vs_Dinosaurs
             theHerd.dino2.attackRobo(theFleet.robot2);
             theHerd.dino3.attackRobo(theFleet.robot3);
 
-            Console.WriteLine(dino1.dinoHealth);
-            Console.WriteLine(dino2.dinoHealth);
-            Console.WriteLine(dino3.dinoHealth);
-            Console.WriteLine(robot1.robotHealth);
-            Console.WriteLine(robot1.robotHealth);
-            Console.WriteLine(robot1.robotHealth);
+            Console.WriteLine(theHerd.dino1.dinoHealth);
+            Console.WriteLine(theHerd.dino2.dinoHealth);
+            Console.WriteLine(theHerd.dino3.dinoHealth);
+            Console.WriteLine(theFleet.robot1.robotHealth);
+            Console.WriteLine(theFleet.robot1.robotHealth);
+            Console.WriteLine(theFleet.robot1.robotHealth);
           
 
 
