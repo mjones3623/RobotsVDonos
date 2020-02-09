@@ -17,7 +17,9 @@ namespace Robots_vs_Dinosaurs
 
             battle1.Battle();
 
-            
+            Console.ReadLine();
+
+
 
         }
     }

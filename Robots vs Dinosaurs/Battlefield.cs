@@ -19,13 +19,28 @@ namespace Robots_vs_Dinosaurs
         {
             theHerd = new Herd();
             theFleet = new Fleet();
-        }
-                  
-        
+
             
+
+
+
+                      
+        }
+        public Dinosaur dino1 = new Dinosaur();
+        public Dinosaur dino2 = new Dinosaur();
+        public Dinosaur dino3 = new Dinosaur();
+        public Robot robot1 = new Robot();
+        public Robot robot2 = new Robot();
+        public Robot robot3 = new Robot();
+
+
+        //Methods
+
         public void Battle()
         {
-     
+            
+            
+            
             theFleet.robot1.attackDinoWithSword(theHerd.dino1);
             theFleet.robot2.attackDinoWithSword(theHerd.dino2);
             theFleet.robot3.attackDinoWithSword(theHerd.dino3);
@@ -33,8 +48,24 @@ namespace Robots_vs_Dinosaurs
             theHerd.dino2.attackRobo(theFleet.robot2);
             theHerd.dino3.attackRobo(theFleet.robot3);
 
-            
+            Console.WriteLine(dino1.dinoHealth);
+            Console.WriteLine(dino2.dinoHealth);
+            Console.WriteLine(dino3.dinoHealth);
+            Console.WriteLine(robot1.robotHealth);
+            Console.WriteLine(robot1.robotHealth);
+            Console.WriteLine(robot1.robotHealth);
+          
+
+
+
+
 
         }
-    }
+        
+
+
+
+
+    }   
+    
 }
