@@ -18,7 +18,7 @@ namespace Robots_vs_Dinosaurs
 
         //Constructor
 
-        public Dinosaur(string dinoType, int dinoHealth, int dinoEnergy, int dinoAttackPower )
+        public Dinosaur()
         {
             dinoType = null;
             dinoHealth = 10;
