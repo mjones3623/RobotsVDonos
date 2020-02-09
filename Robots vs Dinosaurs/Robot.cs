@@ -15,21 +15,22 @@ namespace Robots_vs_Dinosaurs
         public int robotPowerLevel;
         public int swordStrike;
 
+
         //Constructor
 
-        public Robot()
+        public Robot(string Name, int RoHealth, int RobotPower, int SwordPower)
         {
-            robotName = null;
-            robotHealth = 10;
-            robotPowerLevel = 10;
-            swordStrike = 2;
+            robotName = Name;
+            robotHealth = RoHealth;
+            robotPowerLevel = RobotPower;
+            swordStrike = SwordPower;
 
         }
 
 
         //Member Methods
 
-            //Robot attack on Dinosaur
+        //Robot attack on Dinosaur
         public void attackDinoWithSword(Dinosaur dinoToAttack)
         {
             dinoToAttack.dinoHealth -= swordStrike;

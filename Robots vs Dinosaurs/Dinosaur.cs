@@ -16,15 +16,20 @@ namespace Robots_vs_Dinosaurs
         public int dinoEnergy;
         public int dinoAttackPower;
 
+
+
         //Constructor
 
-        public Dinosaur()
+        public Dinosaur(string Type, int Health, int Energy, int AttackPower)
         {
-            dinoType = null;
-            dinoHealth = 10;
-            dinoEnergy = 10;
-            dinoAttackPower = 2;
+            dinoType = Type;
+            dinoHealth = Health;
+            dinoEnergy = Energy;
+            dinoAttackPower = AttackPower;
         }
+
+
+
 
 
         //Member Methods

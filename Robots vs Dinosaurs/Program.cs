@@ -11,14 +11,31 @@ namespace Robots_vs_Dinosaurs
                 
         static void Main(string[] args)
         {
+            //Commense battle
+            
             Battlefield battle1;
 
             battle1 = new Battlefield();
 
             battle1.Battle();
 
+
+
+            //Check status of players
+
+            
+            
+            Battlefield check1;
+
+            check1 = new Battlefield();
+
+           
+            
+
+
             Console.ReadLine();
 
+            
 
 
         }
