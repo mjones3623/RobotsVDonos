@@ -9,19 +9,23 @@ namespace Robots_vs_Dinosaurs
     class Weapon
     {
         //Variables
-        public string type;
-                
+        public string sword;
+        public string gun;
         public int attackPower;
+        public string WeaponType;
+        public List<Weapon> weapons = new List<Weapon>();
+
         
 
-        public Weapon(string weaponType, int attakPower)
+
+
+        //Constructor
+        public Weapon(string weaponType, int attackPower)
         {
 
-            type = weaponType;
-           
-            attackPower = attakPower;
-          
-            
+            this.WeaponType = weaponType;
+            this.attackPower = attackPower;
+
         }
     }
 }

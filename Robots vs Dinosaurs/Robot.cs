@@ -14,17 +14,13 @@ namespace Robots_vs_Dinosaurs
         public int robotHealth;
         public int robotPowerLevel;
         public int swordStrike;
+        List<Weapon> Arsenal;
         public Weapon sword;
         public Weapon gun;
         public Weapon weapon;
-        public string swordOrGun;
+               
+                       
         
-
-
-
-        public List<Weapon> weapons = new List<Weapon>();
-
-
         //Constructor
 
         
@@ -35,19 +31,16 @@ namespace Robots_vs_Dinosaurs
             robotHealth = RoHealth;
             robotPowerLevel = RobotPower;
             swordStrike = SwordPower;
+            Arsenal = new List<Weapon>();
+            sword = new Weapon("Sword", 3);
+            gun = new Weapon("Gun", 5);
+
+            Arsenal.Add(sword);
+            Arsenal.Add(gun);
             
-            sword = new Weapon("sword", 5);
-            gun = new Weapon("gun", 3);
-            weapon = new Weapon("weapon", 10);
-
-            weapons.Add(sword);
-            weapons.Add(gun);
-
-            swordOrGun = "sword";
-           
-
-
             
+                    
+         
 
         }
 
@@ -60,26 +53,17 @@ namespace Robots_vs_Dinosaurs
         //Robot attack on Dinosaur with sword
         public void attackDinoWithSword(Dinosaur dinoToAttack)
         {
-            dinoToAttack.dinoHealth -= sword.attackPower;
+            dinoToAttack.dinoHealth -= Arsenal[0].attackPower;
         }
 
         //Robot attack on Dinosaur with gun
 
         public void attackDinoWithGun(Dinosaur dinoToAttack)
         {
-            dinoToAttack.dinoHealth -= gun.attackPower;
+            dinoToAttack.dinoHealth -= Arsenal[1].attackPower;
         }
 
-        //Choose Weapon
-        public void chooseRobotWeapon()
-        {
-            Console.WriteLine("For Robot 1 choose either sword or gun: " );
-            swordOrGun = Console.ReadLine();
-
-           
-
-            
-        }
+        
 
     }
 }

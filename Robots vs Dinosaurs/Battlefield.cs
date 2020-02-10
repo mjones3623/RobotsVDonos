@@ -24,9 +24,13 @@ namespace Robots_vs_Dinosaurs
 
         int battleCount;
 
-        string swordOrGun;
+        public string swordOrGun1;
+        public string swordOrGun2;
+        public string swordOrGun3;
 
-               
+
+
+
         //Constructor
 
         public Battlefield()
@@ -43,8 +47,12 @@ namespace Robots_vs_Dinosaurs
 
             battleCount = 1;
 
-            swordOrGun = "sword";
-          
+            swordOrGun1 = "sword";
+            swordOrGun2 = "sword";
+            swordOrGun3 = "sword";
+
+
+
 
             isAliveTotal = dino1IsAlive + dino2IsAlive + dino3IsAlive + robot1IsAlive + robot2IsAlive + robot3IsAlive;
 
@@ -64,32 +72,49 @@ namespace Robots_vs_Dinosaurs
         public void Battle()
         {
 
-            Console.WriteLine("Enter sword or gun for Robot fleet weapon :");
-            swordOrGun = Console.ReadLine();
+            Console.WriteLine("For Robot 1 choose either sword or gun: ");
+            swordOrGun1 = Console.ReadLine();
+
+            Console.WriteLine("For Robot 2 choose either sword or gun: ");
+            swordOrGun2 = Console.ReadLine();
+
+            Console.WriteLine("For Robot 3 choose either sword or gun: ");
+            swordOrGun3 = Console.ReadLine();
 
             while (theHerd.dinosaurs[0].dinoHealth + theHerd.dinosaurs[1].dinoHealth + theHerd.dinosaurs[2].dinoHealth > 0 && theFleet.robots[0].robotHealth + theFleet.robots[1].robotHealth + theFleet.robots[2].robotHealth > 0) 
             {
                 //Participants Attack
                
-                if(swordOrGun == "sword")
+                if(swordOrGun1 == "sword")
                 {
                     theFleet.robots[0].attackDinoWithSword(theHerd.dinosaurs[0]);
-                    theFleet.robots[1].attackDinoWithSword(theHerd.dinosaurs[1]);
-                    theFleet.robots[2].attackDinoWithSword(theHerd.dinosaurs[2]);
-                    theHerd.dinosaurs[0].attackRobo(theFleet.robots[0]);
-                    theHerd.dinosaurs[1].attackRobo(theFleet.robots[1]);
-                    theHerd.dinosaurs[2].attackRobo(theFleet.robots[2]);
                 }
 
-                else if(swordOrGun == "gun")
+                else if(swordOrGun1 == "gun")
                 {
                     theFleet.robots[0].attackDinoWithGun(theHerd.dinosaurs[0]);
-                    theFleet.robots[1].attackDinoWithGun(theHerd.dinosaurs[1]);
-                    theFleet.robots[2].attackDinoWithGun(theHerd.dinosaurs[2]);
-                    theHerd.dinosaurs[0].attackRobo(theFleet.robots[0]);
-                    theHerd.dinosaurs[1].attackRobo(theFleet.robots[1]);
-                    theHerd.dinosaurs[2].attackRobo(theFleet.robots[2]);
                 }
+
+                if(swordOrGun2 == "sword")
+                {
+                    theFleet.robots[1].attackDinoWithSword(theHerd.dinosaurs[1]);
+                }
+                else if(swordOrGun2 == "gun")
+                {
+                    theFleet.robots[1].attackDinoWithGun(theHerd.dinosaurs[1]);
+                }
+                if(swordOrGun3 == "sword")
+                {
+                    theFleet.robots[2].attackDinoWithSword(theHerd.dinosaurs[2]);
+                }
+                else if(swordOrGun3 == "gun")
+                {
+                    theFleet.robots[2].attackDinoWithGun(theHerd.dinosaurs[2]);
+                }
+                
+                theHerd.dinosaurs[0].attackRobo(theFleet.robots[0]);
+                theHerd.dinosaurs[1].attackRobo(theFleet.robots[1]);
+                theHerd.dinosaurs[2].attackRobo(theFleet.robots[2]);
 
                 //Write Results
 
