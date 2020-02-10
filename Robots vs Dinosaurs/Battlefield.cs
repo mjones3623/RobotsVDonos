@@ -21,7 +21,8 @@ namespace Robots_vs_Dinosaurs
         int robot3IsAlive;
         
         int isAliveTotal;
-        
+
+        int battleCount;
 
                
         //Constructor
@@ -39,6 +40,8 @@ namespace Robots_vs_Dinosaurs
             robot1IsAlive = 1;
             robot2IsAlive = 1;
             robot3IsAlive = 1;
+
+            battleCount = 1;
 
 
             isAliveTotal = dino1IsAlive + dino2IsAlive + dino3IsAlive + robot1IsAlive + robot2IsAlive + robot3IsAlive;
@@ -69,12 +72,15 @@ namespace Robots_vs_Dinosaurs
                 theHerd.dino2.attackRobo(theFleet.robot2);
                 theHerd.dino3.attackRobo(theFleet.robot3);
 
-                Console.WriteLine(theHerd.dino1.dinoHealth);
-                Console.WriteLine(theHerd.dino2.dinoHealth);
-                Console.WriteLine(theHerd.dino3.dinoHealth);
-                Console.WriteLine(theFleet.robot1.robotHealth);
-                Console.WriteLine(theFleet.robot1.robotHealth);
-                Console.WriteLine(theFleet.robot1.robotHealth);
+                Console.WriteLine("Battle # :" + battleCount);
+                battleCount++;
+                
+                Console.WriteLine("Dinosaur 1, Health: " + theHerd.dino1.dinoHealth);
+                Console.WriteLine("Dinosaur 2, Health:  " + theHerd.dino2.dinoHealth);
+                Console.WriteLine("Dinosaur 3, Health:  " + theHerd.dino3.dinoHealth);
+                Console.WriteLine("Robot 1, Health:  " + theFleet.robot1.robotHealth);
+                Console.WriteLine("Robot 2, Health:  " + theFleet.robot1.robotHealth);
+                Console.WriteLine("Robot 3, Health:  " + theFleet.robot1.robotHealth);
 
                 Console.ReadLine();
 
@@ -114,27 +120,27 @@ namespace Robots_vs_Dinosaurs
 
                 if (theHerd.dino1.dinoHealth > 0 && isAliveTotal == 1)
                 {
-                    Console.WriteLine("Dino 1 is the winner!");
+                    Console.WriteLine("Dinosaurs win!");
                 }
                 if (theHerd.dino2.dinoHealth > 0 && isAliveTotal == 1)
                 {
-                    Console.WriteLine("Dino 2 is the winner!");
+                    Console.WriteLine("Dinosaurs win!");
                 }
                 if (theHerd.dino3.dinoHealth > 0 && isAliveTotal == 1)
                 {
-                    Console.WriteLine("Dino 3 is the winner!");
+                    Console.WriteLine("Dinosaurs win!");
                 }
                 if (theFleet.robot1.robotHealth > 0 && isAliveTotal == 1)
                 {
-                    Console.WriteLine("Robot 1 is the winner!");
+                    Console.WriteLine("Robots win!");
                 }
                 if (theFleet.robot2.robotHealth > 0 && isAliveTotal == 1)
                 {
-                    Console.WriteLine("Robot 2 is the winner!");
+                    Console.WriteLine("Robots win!");
                 }
                 if (theFleet.robot3.robotHealth > 0 && isAliveTotal == 1)
                 {
-                    Console.WriteLine("Robot 3 is the winner!");
+                    Console.WriteLine("Robots win!");
                 }
 
 

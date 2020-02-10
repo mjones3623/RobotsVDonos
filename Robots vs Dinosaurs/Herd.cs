@@ -17,9 +17,9 @@ namespace Robots_vs_Dinosaurs
         //Constructor
         public Herd()
         {
-            dino1 = new Dinosaur("dinoOne", 10, 10, 10);
-            dino2 = new Dinosaur("dinoTwo", 10, 10, 10);
-            dino3 = new Dinosaur("dinoThree", 10, 10, 10);
+            dino1 = new Dinosaur("dinoOne", 15, 10, 5);
+            dino2 = new Dinosaur("dinoTwo", 15, 10, 5);
+            dino3 = new Dinosaur("dinoThree", 15, 10, 5);
 
         }
 
