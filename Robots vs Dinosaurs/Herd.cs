@@ -9,19 +9,14 @@ namespace Robots_vs_Dinosaurs
     class Herd
     {
         //Variables
-
-        public Dinosaur dino1;
-        public Dinosaur dino2;
-        public Dinosaur dino3;
+        public List<Dinosaur> dinosaurs;
 
         //Constructor
         public Herd()
-        {
-            dino1 = new Dinosaur("dinoOne", 15, 10, 5);
-            dino2 = new Dinosaur("dinoTwo", 15, 10, 5);
-            dino3 = new Dinosaur("dinoThree", 15, 10, 5);
-
+        {  
+            dinosaurs = new List<Dinosaur>() { new Dinosaur("dinoOne", 15, 10, 1), new Dinosaur("dinoTwo", 15, 10, 1), new Dinosaur("dinoThree", 15, 10, 1) };
         }
+
 
         //Member Methods
     }

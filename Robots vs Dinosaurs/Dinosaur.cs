@@ -10,7 +10,7 @@ namespace Robots_vs_Dinosaurs
     {
 
         //Member Variables
-
+        
         public string dinoType;
         public int dinoHealth;
         public int dinoEnergy;

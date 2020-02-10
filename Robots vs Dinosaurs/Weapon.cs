@@ -9,6 +9,19 @@ namespace Robots_vs_Dinosaurs
     class Weapon
     {
         //Variables
-        int sword;
+        public string type;
+                
+        public int attackPower;
+        
+
+        public Weapon(string weaponType, int attakPower)
+        {
+
+            type = weaponType;
+           
+            attackPower = attakPower;
+          
+            
+        }
     }
 }

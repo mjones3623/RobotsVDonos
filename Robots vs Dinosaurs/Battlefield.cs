@@ -24,10 +24,10 @@ namespace Robots_vs_Dinosaurs
 
         int battleCount;
 
+        string swordOrGun;
+
                
         //Constructor
-
-
 
         public Battlefield()
         {
@@ -43,6 +43,8 @@ namespace Robots_vs_Dinosaurs
 
             battleCount = 1;
 
+            swordOrGun = "sword";
+          
 
             isAliveTotal = dino1IsAlive + dino2IsAlive + dino3IsAlive + robot1IsAlive + robot2IsAlive + robot3IsAlive;
 
@@ -62,86 +64,61 @@ namespace Robots_vs_Dinosaurs
         public void Battle()
         {
 
-            while(isAliveTotal > 1) 
-            {
+            Console.WriteLine("Enter sword or gun for Robot fleet weapon :");
+            swordOrGun = Console.ReadLine();
 
-                theFleet.robot1.attackDinoWithSword(theHerd.dino1);
-                theFleet.robot2.attackDinoWithSword(theHerd.dino2);
-                theFleet.robot3.attackDinoWithSword(theHerd.dino3);
-                theHerd.dino1.attackRobo(theFleet.robot1);
-                theHerd.dino2.attackRobo(theFleet.robot2);
-                theHerd.dino3.attackRobo(theFleet.robot3);
+            while (theHerd.dinosaurs[0].dinoHealth + theHerd.dinosaurs[1].dinoHealth + theHerd.dinosaurs[2].dinoHealth > 0 && theFleet.robots[0].robotHealth + theFleet.robots[1].robotHealth + theFleet.robots[2].robotHealth > 0) 
+            {
+                //Participants Attack
+               
+                if(swordOrGun == "sword")
+                {
+                    theFleet.robots[0].attackDinoWithSword(theHerd.dinosaurs[0]);
+                    theFleet.robots[1].attackDinoWithSword(theHerd.dinosaurs[1]);
+                    theFleet.robots[2].attackDinoWithSword(theHerd.dinosaurs[2]);
+                    theHerd.dinosaurs[0].attackRobo(theFleet.robots[0]);
+                    theHerd.dinosaurs[1].attackRobo(theFleet.robots[1]);
+                    theHerd.dinosaurs[2].attackRobo(theFleet.robots[2]);
+                }
+
+                else if(swordOrGun == "gun")
+                {
+                    theFleet.robots[0].attackDinoWithGun(theHerd.dinosaurs[0]);
+                    theFleet.robots[1].attackDinoWithGun(theHerd.dinosaurs[1]);
+                    theFleet.robots[2].attackDinoWithGun(theHerd.dinosaurs[2]);
+                    theHerd.dinosaurs[0].attackRobo(theFleet.robots[0]);
+                    theHerd.dinosaurs[1].attackRobo(theFleet.robots[1]);
+                    theHerd.dinosaurs[2].attackRobo(theFleet.robots[2]);
+                }
+
+                //Write Results
 
                 Console.WriteLine("Battle # :" + battleCount);
                 battleCount++;
                 
-                Console.WriteLine("Dinosaur 1, Health: " + theHerd.dino1.dinoHealth);
-                Console.WriteLine("Dinosaur 2, Health:  " + theHerd.dino2.dinoHealth);
-                Console.WriteLine("Dinosaur 3, Health:  " + theHerd.dino3.dinoHealth);
-                Console.WriteLine("Robot 1, Health:  " + theFleet.robot1.robotHealth);
-                Console.WriteLine("Robot 2, Health:  " + theFleet.robot1.robotHealth);
-                Console.WriteLine("Robot 3, Health:  " + theFleet.robot1.robotHealth);
+                Console.WriteLine("Dinosaur 1, Health:  " + theHerd.dinosaurs[0].dinoHealth);
+                Console.WriteLine("Dinosaur 2, Health:  " + theHerd.dinosaurs[1].dinoHealth);
+                Console.WriteLine("Dinosaur 3, Health:  " + theHerd.dinosaurs[2].dinoHealth);
+                Console.WriteLine("Robot 1, Health:  " + theFleet.robots[0].robotHealth);
+                Console.WriteLine("Robot 2, Health:  " + theFleet.robots[1].robotHealth);
+                Console.WriteLine("Robot 3, Health:  " + theFleet.robots[2].robotHealth);
 
                 Console.ReadLine();
 
                 
-
-
-                if (theHerd.dino1.dinoHealth <= 0)
+               if(theHerd.dinosaurs[0].dinoHealth + theHerd.dinosaurs[1].dinoHealth + theHerd.dinosaurs[2].dinoHealth <= 0 && theFleet.robots[0].robotHealth + theFleet.robots[1].robotHealth + theFleet.robots[2].robotHealth > 0)
                 {
-                    dino1IsAlive = 0;
-                }
-                if (theHerd.dino2.dinoHealth <= 0)
-                {
-                    dino2IsAlive = 0;
-                }
-                if (theHerd.dino3.dinoHealth <= 0)
-                {
-                    dino3IsAlive = 0;
-                }
-                if (theFleet.robot1.robotHealth <= 0)
-                {
-                    robot1IsAlive = 0;
-                }
-                if (theFleet.robot2.robotHealth <= 0)
-                {
-                    robot2IsAlive = 0;
-                }
-                if (theFleet.robot3.robotHealth <= 0)
-                {
-                    robot3IsAlive = 0;
+                    Console.WriteLine("Robots Win");
                 }
 
-                //Update Alive Total
+               if(theFleet.robots[0].robotHealth + theFleet.robots[1].robotHealth + theFleet.robots[2].robotHealth <= 0 && theHerd.dinosaurs[0].dinoHealth + theHerd.dinosaurs[1].dinoHealth + theHerd.dinosaurs[2].dinoHealth > 0)
+                {
+                    Console.WriteLine("Dinosaurs Win");
+                }
 
-                AliveTotal();
+              
                                              
-                //Is There A Winner
-
-                if (theHerd.dino1.dinoHealth > 0 && isAliveTotal == 1)
-                {
-                    Console.WriteLine("Dinosaurs win!");
-                }
-                if (theHerd.dino2.dinoHealth > 0 && isAliveTotal == 1)
-                {
-                    Console.WriteLine("Dinosaurs win!");
-                }
-                if (theHerd.dino3.dinoHealth > 0 && isAliveTotal == 1)
-                {
-                    Console.WriteLine("Dinosaurs win!");
-                }
-                if (theFleet.robot1.robotHealth > 0 && isAliveTotal == 1)
-                {
-                    Console.WriteLine("Robots win!");
-                }
-                if (theFleet.robot2.robotHealth > 0 && isAliveTotal == 1)
-                {
-                    Console.WriteLine("Robots win!");
-                }
-                if (theFleet.robot3.robotHealth > 0 && isAliveTotal == 1)
-                {
-                    Console.WriteLine("Robots win!");
-                }
+               
 
 
 

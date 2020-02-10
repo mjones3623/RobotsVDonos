@@ -18,20 +18,7 @@ namespace Robots_vs_Dinosaurs
             battle1 = new Battlefield();
 
             battle1.Battle();
-
-
-
-            //Check status of players
-
-            
-            
-            Battlefield check1;
-
-            check1 = new Battlefield();
-
-           
-            
-
+                                
 
             Console.ReadLine();
 
