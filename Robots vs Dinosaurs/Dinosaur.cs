@@ -15,6 +15,8 @@ namespace Robots_vs_Dinosaurs
         public int dinoHealth;
         public int dinoEnergy;
         public int dinoAttackPower;
+        int[] dinoArsenal = { 2, 4 };
+
 
 
 
@@ -26,9 +28,9 @@ namespace Robots_vs_Dinosaurs
             dinoHealth = Health;
             dinoEnergy = Energy;
             dinoAttackPower = AttackPower;
+            
         }
-
-
+        
 
 
 
@@ -36,7 +38,11 @@ namespace Robots_vs_Dinosaurs
 
         public void attackRobo(Robot robotToAttack)
         {
-            robotToAttack.robotHealth -= dinoAttackPower;
+            robotToAttack.robotHealth -= dinoArsenal[0];
+        }
+        public void attackRoboWithTeeth(Robot robotToAttack)
+        {
+            robotToAttack.robotHealth -= dinoArsenal[1];
         }
     }
 }
